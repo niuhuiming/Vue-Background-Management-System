@@ -22,3 +22,7 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Vue 后台管理模板
+
+https://www.bilibili.com/video/BV1QU4y1E7qo
