@@ -1,6 +1,7 @@
 <template>
   <header>
     <div class="l-content">
+      <!-- 控制侧边栏展开 / 收起的按钮 -->
       <el-button
         @click="handleMenu"
         plain
@@ -8,6 +9,7 @@
         size="mini"
       ></el-button>
       <!-- <h3 style="color: #fff">首页</h3> -->
+      <!-- 首页面包屑 -->
       <el-breadcrumb separator="/">
         <el-breadcrumb-item
           v-for="item in tags"
@@ -22,6 +24,7 @@
         <span>
           <img class="user" :src="userImg" />
         </span>
+        <!-- 下拉选项 -->
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item>个人中心</el-dropdown-item>
           <el-dropdown-item>退出</el-dropdown-item>

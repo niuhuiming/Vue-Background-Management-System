@@ -1,5 +1,6 @@
 <template>
   <div class="tabs">
+    <!-- 加载保存在 vuex 中的 tag -->
     <el-tag
       v-for="(tag, index) in tags"
       :key="tag.name"
@@ -29,13 +30,16 @@ export default {
     ...mapMutations({
       close: "closeTag",
     }),
+    // 跳转路由
     changeMenu(item) {
       this.$router.push({
         name: item.name,
       });
     },
+    // 删除 tag, 并判断是否需要跳转路由
     handleClose(tag, index) {
       const length = this.tags.length - 1;
+      // 调用 vuex 的 closeTag 删除 tag
       this.close(tag);
       if (tag.name !== this.$route.name) {
         return;

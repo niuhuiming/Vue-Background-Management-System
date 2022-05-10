@@ -26,6 +26,7 @@
       </el-card>
     </el-col>
     <el-col :span="16" style="margin-top: 20px">
+      <!-- 首页 card -->
       <div class="num">
         <el-card
           v-for="item in countData"
@@ -43,6 +44,10 @@
           </div>
         </el-card>
       </div>
+      <!-- 
+        封装的 echarts * 3 👇 
+        以下注释部分是未封装写法
+      -->
       <el-card style="height: 280px">
         <!-- <div style="height: 280px" ref="echarts"></div> -->
         <echart :chartData="echartData.order" style="height: 280px"></echart>

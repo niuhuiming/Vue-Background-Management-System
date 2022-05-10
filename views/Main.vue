@@ -1,13 +1,17 @@
 <template>
   <el-container style="height: 100%">
+    <!-- 导航区 -->
     <el-aside width="auto">
       <common-aside></common-aside>
     </el-aside>
     <el-container>
+      <!-- 头部 -->
       <el-header>
         <common-header></common-header>
       </el-header>
+      <!-- tag -->
       <common-tag></common-tag>
+      <!-- 页面内容 -->
       <el-main>
         <router-view></router-view>
       </el-main>

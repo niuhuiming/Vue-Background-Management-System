@@ -1,6 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { Button, Container, Main, Header, Aside, Menu, Submenu, MenuItem, MenuItemGroup, Dropdown, DropdownMenu, DropdownItem, Row, Col, Card, Table, TableColumn, Breadcrumb, BreadcrumbItem, Tag } from 'element-ui'
+import {
+  Button, Container, Main, Header, Aside,
+  Menu, Submenu, MenuItem, MenuItemGroup, Dropdown,
+  DropdownMenu, DropdownItem, Row, Col, Card,
+  Table, TableColumn, Breadcrumb, BreadcrumbItem, Tag,
+  Form, FormItem, Input, Select, Switch,
+  DatePicker, Option, Dialog, Pagination, MessageBox,
+  Message
+} from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import './assets/less/index.less'
 
@@ -30,8 +38,20 @@ Vue.use(TableColumn)
 Vue.use(Breadcrumb)
 Vue.use(BreadcrumbItem)
 Vue.use(Tag)
+Vue.use(Form)
+Vue.use(FormItem)
+Vue.use(Input)
+Vue.use(Select)
+Vue.use(Switch)
+Vue.use(DatePicker)
+Vue.use(Option)
+Vue.use(Dialog)
+Vue.use(Pagination)
 
 Vue.prototype.$http = http
+// 按需引入的写法
+Vue.prototype.$confirm = MessageBox.confirm
+Vue.prototype.$message = Message
 
 new Vue({
   store,
