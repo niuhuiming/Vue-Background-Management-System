@@ -82,7 +82,9 @@ export default {
    * @return {*}
    */
   deleteUser: config => {
-    const { id } = param2Obj(config.url)
+    // const { id } = param2Obj(config.url)
+    const body = JSON.parse(config.body)
+    const id = body.params.id;
     if (!id) {
       return {
         code: -999,

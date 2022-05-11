@@ -173,7 +173,7 @@ export default {
       this.operateType = "edit";
       this.isShow = true;
       // 回显数据
-      this.operateForm = row;
+      this.operateForm = { ...row };
     },
     delUser(row) {
       this.$confirm("此操作将永久删除该文件，是否继续", "提示", {
